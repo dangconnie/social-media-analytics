@@ -1,0 +1,8 @@
+CMD
+
+$ python ./twitter_search.py cats -c 50
+	--find 'cats' in twitter and display 50 results
+
+
+SPYDER
+Run Settings (check command line options and write arguments in it -c 50)-> Configure -> General Settings
