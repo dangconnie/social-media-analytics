@@ -26,7 +26,7 @@ def youtube_search(options):
     playlists = []
     
     # create a CSV output for video list    
-    csvFile = open('video_result.csv','w')
+    csvFile = open('video_result.csv','w') # writes results into a file called video_result.csv
     csvWriter = csv.writer(csvFile)
     csvWriter.writerow(["title","videoId","viewCount","likeCount","dislikeCount","commentCount","favoriteCount"])
     
