@@ -130,7 +130,7 @@ def tw_search_json(query, cnt=5):
 def tw_search(api):
     counter = 0
     # Open/Create a file to append data
-    csvFile = open('result.csv','w')
+    csvFile = open('result.csv','w') # writes results to a file called result.csv
     #Use csv Writer
     csvWriter = csv.writer(csvFile)
     csvWriter.writerow(["created", "text", "retwc", "hashtag", "followers", "friends"])
