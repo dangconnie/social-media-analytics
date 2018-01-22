@@ -1,3 +1,8 @@
+if (!require(ggplot2)) {
+    install.packages("ggplot2")
+    require(ggplot2)
+}
+
 #=======================================================
 #=======================================================
 #+++++++++++++++++ Business Data +++++++++++++++++++++++
@@ -64,8 +69,11 @@ ggplot(user_data,aes(review_count,fans,color=userCluster$cluster)) + geom_point(
 #Clustering to discover underlying organization of data
 
 
+
+
+
 #=======================================================
-# ======================== My Turn =====================s
+#======================== My Turn =====================
 # How are the average_stars and useful_votes related?
 #=======================================================
 #=======================================================
@@ -75,4 +83,16 @@ user_data = read.csv(file="yelp_user_dataset.csv")
 
 cor(user_data$useful_votes, user_data$average_stars) # 0.001898496 - a very weak correlation
 
+#Distribution of stars in user dataset
+ggplot(user_data) + geom_bar(aes(x=average_stars), fill="grey")
 
+#Histogram
+ggplot(user_data) + geom_histogram(aes(x=average_stars),binwidth = 0.1)
+
+#Seems like there is no relation between the two variables or a very weak one. Using clustering.
+userCluster = kmeans(user_data[,c(4,7)], 3)
+
+ggplot(user_data, aes(average_stars, useful_votes, color=userCluster$cluster)) + geom_point()
+
+
+       

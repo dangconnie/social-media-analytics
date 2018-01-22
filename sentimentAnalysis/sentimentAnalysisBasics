@@ -1,0 +1,21 @@
+Polarity
+	--Positive, negative and neutral emotions(+, -, 0)
+
+	--ex: product reviews, movie reviews
+
+
+
+Subjectivity 
+	--How biased or subjective something is
+
+	--Text classified into one of two classes: Objective and subjective (0 to 1)
+		--0 is objective, 1 is subjective
+		--the higher the subjectivity, the more subjective
+
+	--Depends on context, category and criteria of subjectivity
+
+	--Usually, under 0.5 is close to objective
+
+
+textblob
+	--Python library for processing textual data
