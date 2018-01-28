@@ -1,0 +1,13 @@
+- We want to know what people are tweeting about. What are the current trends?
+
+
+-R Packages:
+--- tm - a framework for text mining applications within R
+--- igraph - network analysis package of R
+
+
+-Corpus:
+--- set of words in the dataset
+
+-Term-Document matrix
+--- Matrix that describes the frequency of terms that occur in a collection of documents (in our cse, Tweets)
