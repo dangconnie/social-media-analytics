@@ -1,8 +1,18 @@
 library(tm)
 #library(tmap)
 library(igraph)
+library(SnowballC)
 
-twitter_data = read.table(file.choose(), header=TRUE,sep="\t",encoding="UTF-8", stringsAsFactors = FALSE)
+
+sf<-system.file("texts", "txt", package = "tm")
+ds <-DirSource(sf)
+your_corpus <-Corpus(ds)
+
+# Check status with the following line
+meta(your_corpus[[1]])
+
+
+twitter_data = read.csv(file.choose(), header=TRUE,sep=",",encoding="UTF-8", stringsAsFactors = FALSE)
 twitter_data$text = paste(substr(twitter_data$text,2,nchar(twitter_data$text))) # We may need to remove the first charactore 'b' from the string.
 
 # Clean Data

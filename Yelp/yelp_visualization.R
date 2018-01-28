@@ -1,3 +1,4 @@
+# So that I don't have to install every time
 if (!require(ggplot2)) {
     install.packages("ggplot2")
     require(ggplot2)

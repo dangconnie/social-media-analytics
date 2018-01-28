@@ -9,5 +9,9 @@
 -Corpus:
 --- set of words in the dataset
 
+
+-Terms: People in Twitter, FB, LinkedIn, etc
+
 -Term-Document matrix
 --- Matrix that describes the frequency of terms that occur in a collection of documents (in our cse, Tweets)
+--- Ex: Group and/or friendship in social network
